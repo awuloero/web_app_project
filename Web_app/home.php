@@ -3,7 +3,7 @@ session_start();
 include('header.php');
 include('dbcon.php'); 
 
-if (isset($_SESSION['uname'])) {
+if (isset($_SESSION['uname']) != "admin") {
     echo "<h2>Hello ".$_SESSION['uname'].",</h2>";
 } else {
     header('location:index.php?message=You need login to enter the site');
